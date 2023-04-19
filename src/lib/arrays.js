@@ -38,7 +38,9 @@ const reverseWordsInArray = strings => {
 const onlyEven = numbers => numbers.filter(number => number % 2 === 0);
 
 const removeNthElement2 = (index, array) => {
-  return array.filter((_, itemIndex) => itemIndex !== index);
+  const copyArray = [...array];
+  copyArray.splice(index, 1);
+  return copyArray;
 };
 
 const elementsStartingWithAVowel = strings => {
